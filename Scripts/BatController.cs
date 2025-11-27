@@ -12,7 +12,15 @@ public class BatController : EnemyController
         SetUp();
     }
 
-
+    protected override void Stand()
+    {
+        if (target != null)
+        {
+            actionType = ActionType.Trace;
+            rb.linearVelocityX = 0;
+            actionTime = 1;
+        }
+    }
     protected override void Trace()
     {
         Debug.Log("HI");
