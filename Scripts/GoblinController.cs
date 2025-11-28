@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class GoblinController : EnemyController
 {
-    
+
     void Start()
     {
         SetUp();
@@ -15,7 +15,7 @@ public class GoblinController : EnemyController
         ActionSelector();
         AnimationController();
     }
-    protected virtual void SetUp()
+    protected override void SetUp()
     {
         ac = GetComponent<AttributesController>();
         stc = GetComponent<StatusController>();
