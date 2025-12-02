@@ -847,7 +847,7 @@ MonoBehaviour:
   attackCd: 0
   ground:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   soundWave: {fileID: 2280458158600081159, guid: 9d33413a3e72c034faf68497684ab339, type: 3}
   shooter: {fileID: 1847537950}
 --- !u!195 &213642446
