@@ -95,7 +95,7 @@ public abstract class EnemyController : MonoBehaviour
             switch (patrolType)
             {
                 case PatrolType.Patroller:
-                    actionType = (ActionType)(int)Mathf.Round(Random.Range(0,2));
+                    actionType = (ActionType)Random.Range(0,2);
                     if(actionType == ActionType.Stand)
                     {
                         actionTime = Random.Range(1, 3);
@@ -184,7 +184,7 @@ public abstract class EnemyController : MonoBehaviour
         else
         {
             if(Physics2D.Raycast((facingRight?Vector3.right:Vector3.left) + transform.position, Vector2.down, 1, ground) 
-                && Physics2D.Raycast((facingRight ? Vector3.right : Vector3.left) + transform.position, (facingRight ? Vector3.right : Vector3.left), 0.5f, ground))
+                && !Physics2D.Raycast((facingRight ? Vector3.right : Vector3.left) + transform.position, (facingRight ? Vector3.right : Vector3.left), 0.5f, ground))
             {
                 Walk();
             }
