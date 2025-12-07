@@ -57,7 +57,7 @@ public abstract class EnemyController : MonoBehaviour
     }
     protected void ActionSelector()
     {
-        if(actionTime > 0)
+        if(actionTime > 0 && stc.CanMove())
         {
             actionTime -=Time.deltaTime;
             switch (actionType)
