@@ -53,7 +53,7 @@ public class BatController : EnemyController
             actionTime = 0;
         }
     }
-    // Update is called once per frame
+
     void Update()
     {
         attackTime -= Time.deltaTime;
@@ -103,7 +103,6 @@ public class BatController : EnemyController
             }
             if (attackCd <= 0)
             {
-
                 attackCd = attackCdSet;
                 attackTime = 0.8f;
                 attacked = false;
